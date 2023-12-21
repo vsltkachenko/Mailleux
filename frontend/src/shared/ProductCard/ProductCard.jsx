@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
 	return (
 		<article className='product-card'>
 			<Link to={`/catalog/product/${product.id}`} className='product-card__image'>
-				<img src={`${process.env.REACT_APP_FRONTEND_URL}${product.image}`} alt='' />
+				<img src={`./${product.image}`} alt='' />
 			</Link>
 			<div className='product-card__content'>
 				<Link to={`/catalog/product/${product.id}`} className='product-card__title'>
