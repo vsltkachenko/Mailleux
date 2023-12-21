@@ -98,7 +98,7 @@ const Product = () => {
 						<div className='product__body'>
 							<div className='product__detail'>
 								<div className='product__image'>
-									<img src={`./${product.image}`} alt='' />
+									<img src={`../../${product.image}`} alt='' />
 								</div>
 								<Accordion classes={'product__accordion'} list={productDetails} multiple />
 							</div>
