@@ -17,7 +17,7 @@ const SelectedProducts = () => {
 		if (!selectedProducts.length) {
 			dispatch(getSelectedProducts({ productsCount: 4 }))
 		}
-	}, [dispatch, selectedProducts.length])
+	}, [dispatch, selectedProducts?.length])
 
 	return (
 		<section className='selected-products'>
