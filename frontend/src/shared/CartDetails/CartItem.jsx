@@ -24,7 +24,7 @@ const CartItem = ({ item }) => {
 		<div className='body-details-cart__tr'>
 			<div className='body-details-cart__td'>
 				<div className='body-details-cart__td_thumb'>
-					<img src={`${process.env.REACT_APP_FRONTEND_URL}${item.image}`} alt='' />
+					<img src={`./${item.image}`} alt='' />
 				</div>
 				<div className='body-details-cart__td_content'>
 					<h4>
