@@ -1,0 +1,45 @@
+@import '../../styles/vars.scss';
+
+.checkbox {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+	@media (any-hover: hover) {
+		&:hover {
+			color: $orangeColor;
+		}
+	}
+	&__input {
+		appearance: none;
+		&:checked {
+			& ~ .checkbox__box {
+				background-color: $orangeColor;
+			}
+		}
+	}
+	&__box {
+		align-items: center;
+		background-color: #fff;
+		border: 1px solid #dfe3e6;
+		border-radius: 2px;
+		color: #fff;
+		cursor: pointer;
+		display: flex;
+		flex-shrink: 0;
+		height: 17px;
+		justify-content: center;
+		margin-right: 7px;
+		transition: background-color 0.2s;
+		width: 17px;
+	}
+	&__text {
+		font-weight: 700;
+		line-height: 2;
+	}
+	&__icon {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+}

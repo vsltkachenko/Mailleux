@@ -1,0 +1,67 @@
+@import '../../styles/mixins.scss';
+
+.section-header {
+	display: grid;
+	@include adaptiveValue('grid-gap', 40, 24);
+	text-align: center;
+	max-width: 1060px;
+	margin: 0 auto;
+
+	// animate
+	&.animate {
+		.section-header__titles,
+		.section-header__text {
+			transform: translate(0px, 0px);
+			opacity: 1;
+		}
+	}
+
+	// .section-header__titles
+	&__titles {
+		display: grid;
+		grid-gap: 10px;
+		//animate
+		opacity: 0;
+		transform: translate(0px, 50px);
+		transition: all 1s ease 0.2s;
+	}
+	// .section-header__subtitle
+	&__subtitle {
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 500;
+	}
+	// .section-header__title
+	&__title {
+		@include adaptiveValue('font-size', 80, 40);
+		color: $orangeColor;
+		font-weight: 500;
+		text-transform: uppercase;
+		font-family: 'Bebas Neue', sans-serif;
+	}
+	// .section-header__text
+	&__text {
+		@include adaptiveValue('font-size', 26, 18);
+		font-weight: 300;
+		line-height: 1.6;
+		color: $mainColor;
+		opacity: 0;
+		transform: translate(0px, 50px);
+		transition: all 1s ease 0.5s;
+	}
+	&.dashboard__header {
+		text-align: left;
+		grid-gap: 20px;
+		margin: 0;
+		&_center {
+			text-align: center;
+		}
+		.section-header__title {
+			@include adaptiveValue('font-size', 60, 30);
+		}
+		.section-header__text {
+			@include adaptiveValue('font-size', 18, 16);
+		}
+	}
+}

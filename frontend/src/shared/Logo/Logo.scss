@@ -1,0 +1,15 @@
+@import '../../styles/mixins.scss';
+
+.logo {
+	font-size: 30px;
+	position: relative;
+	z-index: 2;
+	padding: 12px 15px;
+	color: #003620;
+	@media (min-width: $tablet) {
+		padding-left: 0;
+	}
+	@media (max-width: $mobile) {
+		@include adaptiveValue('font-size', 30, 24);
+	}
+}

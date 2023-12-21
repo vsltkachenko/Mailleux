@@ -1,0 +1,100 @@
+@import '../../styles/vars';
+
+.mega-menu {
+	display: none;
+	padding: 50px 60px;
+	border: 0;
+	border-radius: 0;
+	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.08);
+	max-height: calc(100vh - var(--header-height) - 25px);
+	overflow-y: auto;
+	top: 100%;
+	width: 100%;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	font-size: 15px;
+	line-height: 1.8;
+	text-align: left;
+
+	@media (max-width: $tablet) {
+		display: none;
+	}
+
+	// .mega-menu__body
+	&__body {
+		display: grid;
+		grid-gap: 70px;
+		grid-template-columns: 1fr 327px;
+	}
+	// .mega-menu__content
+	&__content {
+	}
+	// .mega-menu__block
+	&__block {
+		grid-gap: 30px 40px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		width: 100%;
+	}
+	// .mega-menu__column
+	&__column {
+		&.all-products {
+			display: flex;
+			align-items: center;
+			grid-column: span 3;
+			justify-self: end;
+
+			svg {
+				margin-left: 7px;
+				transition: all 0.3s ease;
+			}
+			@media (any-hover: hover) {
+				&:hover svg {
+					color: $orangeColor;
+					transform: translateX(5px);
+				}
+			}
+		}
+		&:nth-last-child(2) {
+			.mega-menu__link span {
+				text-transform: uppercase;
+			}
+		}
+		&.hover {
+			.mega-menu__link span {
+				text-decoration: underline;
+			}
+		}
+		&.active {
+			.mega-menu__link span {
+				color: $orangeColor;
+			}
+		}
+	}
+	// .mega-menu__link
+	&__link {
+		display: inline-block;
+		padding: 1px 0;
+		font-weight: 300;
+		// transition: all 0.3s ease;
+		span {
+			font-weight: 700;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $orangeColor;
+			}
+		}
+	}
+	// .mega-menu__list
+	&__list {
+	}
+	// .mega-menu__item
+	&__item {
+	}
+	// .mega-menu__image
+	&__image {
+		height: 500px;
+	}
+}

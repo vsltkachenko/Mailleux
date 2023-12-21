@@ -1,0 +1,68 @@
+@import '../../styles/vars.scss';
+
+.custom-select {
+	&__control {
+		border-radius: 0 !important;
+		cursor: pointer !important;
+
+		&:hover,
+		&:active {
+			&--menu-is-open {
+				border-color: $orangeColor !important;
+				border-bottom-color: transparent !important;
+			}
+		}
+		&--is-focused {
+			box-shadow: none !important;
+			// border-color: hsl(0, 0%, 70%) !important;
+			border-color: $orangeColor !important;
+			// transition: border-color 0.15s ease-in-out !important;
+		}
+		&--menu-is-open {
+			box-shadow: none !important;
+			border-color: $orangeColor !important;
+			border-bottom-color: transparent !important;
+			.custom-select__indicators {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	&__menu {
+		margin-top: 0 !important;
+		border: 1px solid $orangeColor !important;
+		border-radius: 0 !important;
+		border-top-color: transparent !important;
+
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175) !important;
+
+		overflow-x: hidden !important;
+		font-size: 12px;
+		line-height: 1.8;
+		font-weight: 500;
+		&-list {
+			max-height: 200px !important;
+		}
+	}
+
+	&__option {
+		cursor: pointer !important;
+		&--is-selected {
+		}
+	}
+
+	&__indicator-separator {
+		display: none;
+	}
+	&__indicators {
+		svg {
+			height: 15px;
+			width: 15px;
+		}
+	}
+	&__single-value {
+		line-height: 1.8;
+		font-size: 14px;
+		font-weight: 500;
+		color: $mainColor;
+	}
+}

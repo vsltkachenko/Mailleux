@@ -1,0 +1,22 @@
+@import '../../styles/mixins.scss';
+
+.input-quantity {
+	max-width: 100px;
+	font-weight: 400;
+	text-align: center;
+	font-size: 14px;
+	padding: 15px;
+	border-radius: 2px;
+	height: 50px;
+	line-height: 1.3;
+	border: 1px solid #dfe3e6;
+	background-color: #fff;
+	transition: border-color 0.15s ease-in-out;
+	&:focus {
+		border-color: $orangeColor;
+		outline: 0;
+	}
+	@media (max-width: $mobileSmall) {
+		max-width: 65px;
+	}
+}

@@ -1,0 +1,132 @@
+@import '../../styles/mixins.scss';
+
+.footer {
+	background-color: $bannerColor;
+	color: #fff;
+}
+.footer-top {
+	@include adaptiveValue('padding-top', 60, 40);
+	@include adaptiveValue('padding-bottom', 80, 40);
+}
+.footer-nav {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-gap: 40px 20px;
+	@media (max-width: $tablet) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	@media (max-width: 580px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (max-width: $mobileSmall) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+	}
+
+	// .footer-nav__column
+	// &__column {
+	// }
+	// .footer-nav__title
+	&__title {
+		font-size: 14px;
+		line-height: 1.2;
+		margin-bottom: 16px;
+		font-weight: 700;
+		color: $orangeColor;
+	}
+	// .footer-nav__menu
+	// &__menu {
+	// }
+	// .footer-nav__item
+	// &__item {
+	// }
+	// .footer-nav__link
+	&__link {
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 2;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.payments {
+	// .payments__link
+	// &__link {
+	// }
+	// .payments__list
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 11px;
+	}
+	// .payments__logo
+	&__logo {
+		background-color: #fff;
+		border-radius: 4px;
+		max-width: 50px;
+		img {
+			max-width: 100%;
+		}
+	}
+}
+.footer-bottom {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	@media (min-width: $mobile) {
+		justify-content: space-between;
+		flex-direction: row;
+		align-items: center;
+	}
+	padding-bottom: 25px;
+
+	// .footer-bottom__info
+	&__info {
+		display: flex;
+		align-items: center;
+		column-gap: 20px;
+		@media (max-width: $mobile) {
+			flex-direction: column;
+		}
+
+		.logo {
+			font-size: 14px;
+			color: #f0dbbd;
+			padding-left: 0;
+		}
+	}
+	// .footer-bottom__copyright
+	&__copyright {
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 1.2;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	// .footer-bottom__link
+	&__link {
+		font-size: 0;
+		a::before {
+			font-size: 15px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				a::before {
+					color: #f0dbbd;
+				}
+			}
+		}
+		@media (max-width: $tablet) {
+			margin-right: 65px;
+		}
+	}
+}

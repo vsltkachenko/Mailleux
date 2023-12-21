@@ -1,0 +1,85 @@
+@import '../../styles/mixins.scss';
+.catalog {
+	@include adaptiveValue('padding-top', 100, 50);
+	@include adaptiveValue('padding-bottom', 100, 50);
+	.section-header {
+		text-align: initial;
+		margin: 0;
+	}
+	// .catalog__content
+	&__content {
+		display: grid;
+		@include adaptiveValue('grid-gap', 40, 20);
+		grid-template-columns: repeat(4, 1fr);
+		@include adaptiveValue('margin-top', 50, 20);
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.backdrop {
+			z-index: 1050;
+			@media (min-width: $tablet) {
+				display: none;
+			}
+		}
+	}
+	// .catalog__aside
+	&__aside {
+	}
+	// .catalog__main
+	&__main {
+		grid-column: span 3;
+	}
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 10px 20px;
+	}
+	// .catalog__tools
+	&__tools {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px 20px;
+	}
+	&__select {
+		width: 200px;
+		display: inline-block;
+		.custom-select {
+			&__option {
+				background-color: #fff;
+				&--is-selected {
+					color: $orangeColor;
+				}
+				@media (any-hover: hover) {
+					&:hover {
+						background-color: #f7f7f7;
+					}
+				}
+			}
+		}
+	}
+
+	// .catalog__products
+	&__products {
+		margin-top: 50px;
+		@include adaptiveValue('margin-bottom', 50, 25);
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		@include adaptiveValue('grid-gap', 40, 10);
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: 1fr;
+		}
+
+		.product-card {
+			gap: 20px;
+			&__image {
+				padding-top: 100%;
+			}
+		}
+	}
+}
+

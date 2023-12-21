@@ -1,0 +1,42 @@
+@import '../../styles/vars.scss';
+
+.aside-card {
+	padding: 0 15px;
+	// .aside-card__title
+	&__title {
+		font-size: 14px;
+		font-weight: 500;
+		border-bottom: 1px solid #f3f5f8;
+		padding: 11px 0;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	// .aside-card__body
+	&__body {
+		font-size: 14px;
+		padding: 11px 0;
+	}
+	// .aside-card__nav
+	// &__nav {
+	// }
+	// .aside-card__item
+	&__item {
+		&:not(:first-child) {
+			margin-top: 2px;
+		}
+	}
+	// .aside-card__link
+	&__link {
+		// display: block;
+		font-weight: 700;
+		line-height: 2;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $orangeColor;
+			}
+		}
+		&.active {
+			color: $orangeColor;
+		}
+	}
+}

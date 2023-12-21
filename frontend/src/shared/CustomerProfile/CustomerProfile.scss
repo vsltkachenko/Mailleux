@@ -1,0 +1,51 @@
+@import '../../styles/mixins.scss';
+
+.profile-form {
+	&__body {
+		margin: 30px 0;
+		grid-gap: 15px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: 1fr;
+		}
+		.form__group {
+			margin-bottom: 0;
+			span {
+				position: static;
+			}
+			&:first-child {
+				@media (min-width: $mobileSmall) {
+					grid-column: span 2;
+				}
+			}
+		}
+	}
+	&__submit {
+		grid-template-columns: auto auto;
+		justify-content: start;
+	}
+}
+
+.profile-modal {
+	position: relative;
+	&__body,
+	&__footer {
+		padding: 40px;
+	}
+
+	&__message {
+		color: $orangeColor;
+		font-family: 'Bebas Neue', sans-serif;
+		font-size: 25px;
+		font-weight: 500;
+		line-height: 1.06;
+		@include adaptiveValue('padding', 30, 10);
+	}
+	&__footer {
+		border-top: 1px solid #e5e5e5;
+		display: flex;
+		gap: 12px;
+		justify-content: center;
+	}
+}

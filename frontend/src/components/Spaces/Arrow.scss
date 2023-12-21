@@ -1,0 +1,33 @@
+@import '../../styles/vars';
+
+.custom-arrow {
+	height: 56px;
+	width: 56px;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	color: $orangeColor;
+	transition: all 0.2s ease;
+	z-index: 10;
+	@media (any-hover: hover) {
+		&:hover {
+			background: $orangeColor !important;
+			&::before {
+				color: #fff;
+			}
+		}
+	}
+	@media (max-width: 1440px) {
+		display: none !important;
+	}
+	&.slick-prev::before {
+		transform: rotate(180deg);
+	}
+}
+._icon-arrow:before {
+	content: '\e901';
+	color: #eb601d;
+	font-size: 36px;
+	opacity: 1;
+}

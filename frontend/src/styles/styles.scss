@@ -1,0 +1,45 @@
+@use 'sass:math';
+// Root vars
+@import 'vars_root';
+// Міксіни
+@import 'mixins';
+
+// Шрифти
+@import 'fonts';
+@import 'icons';
+//&display=swap - додати при підключенні через плагін
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,regular,500,700,900&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+// Обнулення, загальні параметри
+@import 'null';
+
+body {
+	color: $mainColor;
+	&.lock {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+	// Сайт завантажений
+	// .loaded & {
+	// }
+}
+
+// Контейнер
+.container {
+	max-width: rem($containerWidth);
+	margin: 0 auto;
+	padding: 0 rem(math.div($containerPadding, 2));
+
+	&_full {
+		margin: 0 auto;
+		max-width: ($maxWidth) + px;
+		padding: 0;
+		width: 100%;
+		overflow: hidden;
+	}
+}
+
+// Загальні стилі
+@import 'common';

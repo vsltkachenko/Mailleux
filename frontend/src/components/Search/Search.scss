@@ -1,0 +1,64 @@
+@import '../../styles/mixins.scss';
+
+.search {
+	background-color: #f3f5f8;
+	padding: max(18vh, 85px) 35px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	transition: all 0.3s;
+	opacity: 0;
+	visibility: hidden;
+	will-change: opacity, visibility;
+	z-index: 1050;
+
+	// .search__container
+	&__container {
+	}
+	// .search__content
+	&__content {
+	}
+	&.open {
+		opacity: 1;
+		visibility: visible;
+	}
+	@media (max-width: $mobile) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+.search-form {
+	display: grid;
+	grid-gap: 24px;
+	position: relative;
+
+	h3 {
+		@include adaptiveValue('font-size', 50, 24);
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		color: $orangeColor;
+		font-family: 'Balboa', sans-serif;
+		font-weight: 600;
+		line-height: 1.5;
+	}
+
+	// .search-form__group
+	&__group {
+		border-bottom: 1px solid #d4d1d4;
+		display: flex;
+		align-items: center;
+	}
+	// .search-form__input
+	&__input {
+		flex: 1;
+		height: 50px;
+		padding: 10px 0;
+		outline: transparent;
+		background-color: transparent;
+		&::placeholder {
+			color: #d4d1d4;
+		}
+	}
+}

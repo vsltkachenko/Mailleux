@@ -1,0 +1,29 @@
+@import '../../styles/vars.scss';
+
+.paginations {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	flex-wrap: wrap;
+
+	li span {
+		width: 2rem;
+		height: 2rem;
+		padding: 5px;
+		border-radius: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid $mainColor;
+		color: $mainColor;
+		font-size: 1.1rem;
+		cursor: pointer;
+		font-weight: 700;
+
+		&.active-page {
+			color: $orangeColor;
+			border-color: $orangeColor;
+		}
+	}
+}

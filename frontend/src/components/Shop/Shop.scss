@@ -1,0 +1,56 @@
+@import '../../styles/mixins.scss';
+
+.shop {
+	// .shop__list
+	&__list {
+		@include adaptiveValue('margin-top', 50, 25);
+		column-gap: 20px;
+		row-gap: 35px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		@media (max-width: $mobile) {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+		}
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	// .shop__category
+	// &__category {
+	// }
+}
+.category-shop {
+	@include adaptiveValue('padding-left', 20, 10);
+	@include adaptiveValue('padding-right', 20, 10);
+	// .category-shop__link
+	&__link {
+		display: grid;
+		gap: 15px;
+		text-align: center;
+		@media (any-hover: hover) {
+			&:hover {
+				.category-shop__image {
+					transform: translateY(-8px);
+				}
+			}
+		}
+	}
+	// .category-shop__image
+	&__image {
+		max-width: 100%;
+		margin: auto;
+		transition: transform 0.3s cubic-bezier(0.21, 0, 0.18, 1);
+		will-change: transform;
+	}
+	// .category-shop__title
+	&__title {
+		@include adaptiveValue('font-size', 15, 13);
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		line-height: 1.6;
+		font-weight: 500;
+	}
+}

@@ -1,0 +1,126 @@
+@import '../../styles/mixins.scss';
+
+.menu-bottom {
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	@include adaptiveValue('column-gap', 32, 1, 0, 1280, 992);
+	font-weight: 500;
+	@media (max-width: $tablet) {
+		flex-direction: column-reverse;
+		align-items: start;
+		order: 1;
+	}
+	// .menu-bottom__main
+	&__main {
+		@media (max-width: $tablet) {
+			margin-left: 7px;
+		}
+	}
+	// .menu-bottom__list
+	&__list {
+		display: flex;
+		@include adaptiveValue('column-gap', 32, 1, 0, 1280, 992);
+		@media (max-width: $tablet) {
+			display: block;
+		}
+	}
+	// .menu-bottom__item
+	&__item {
+		.menu__link {
+			// padding: 5px 15px;
+			@include adaptiveValue('font-size', 20, 16, 1, 1280, 992);
+		}
+		@media (max-width: $tablet) {
+			font-weight: 300;
+			font-size: 20px;
+			margin-bottom: 5px;
+		}
+	}
+	// .menu-bottom__shop
+	&__shop {
+		display: flex;
+		align-items: center;
+		@media (min-width: $tablet) {
+			&::before {
+				content: '';
+				display: block;
+				background-color: $orangeColor;
+				@include adaptiveValue('margin-right', 45, 15, 0, 1280, 992);
+				width: 1px;
+				height: 27px;
+				margin-left: 8px;
+			}
+		}
+		@media (max-width: $tablet) {
+			margin-bottom: 5px;
+		}
+	}
+	// .menu-bottom__catalog
+	&__catalog {
+		@media (min-width: $tablet) {
+			@media (any-hover: hover) {
+				&:hover {
+					.mega-menu {
+						display: block;
+					}
+					&::after {
+						content: '';
+						display: block;
+						position: absolute;
+						left: 0;
+						height: 25px;
+						width: 100%;
+						top: calc(100% - 25px);
+						background-color: transparent;
+					}
+					.menu__link {
+						color: $orangeColor;
+					}
+				}
+			}
+		}
+		.menu__link {
+			font-size: 20px;
+			padding-left: 15px;
+			font-weight: 300;
+			@media (min-width: $tablet) {
+				padding-left: 0;
+			}
+		}
+	}
+	// .menu-bottom__actions
+	&__actions {
+		margin-left: 8px;
+		display: flex;
+		column-gap: 10px;
+		@include adaptiveValue('column-gap', 10, 0, 1, 1280, 992);
+		.menu__link {
+			display: flex;
+			align-items: center;
+			&.active {
+				svg {
+					color: $orangeColor;
+				}
+			}
+		}
+		.badge {
+			position: absolute;
+			right: 0px;
+			top: -2px;
+			align-items: center;
+			background-color: $orangeColor;
+			border-radius: 50%;
+			color: #fff;
+			display: flex;
+			font-size: 11px;
+			font-weight: 300;
+			height: 16px;
+			justify-content: center;
+			width: 16px;
+		}
+		@media (max-width: $tablet) {
+			margin-bottom: 15px;
+		}
+	}
+}

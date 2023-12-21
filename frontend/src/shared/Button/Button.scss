@@ -1,0 +1,170 @@
+@import '../../styles/mixins.scss';
+
+// Button
+.btn {
+	font-size: 14px;
+	text-transform: uppercase;
+	@include adaptiveValue('padding-top', 12, 8);
+	@include adaptiveValue('padding-bottom', 12, 8);
+	@include adaptiveValue('padding-left', 33, 17);
+	@include adaptiveValue('padding-right', 33, 17);
+	border-radius: 100px;
+	background-color: $orangeColor;
+	color: #fff;
+	letter-spacing: 1px;
+	text-align: center;
+	white-space: nowrap;
+	line-height: 1.8;
+	transition: transform 0.3s, box-shadow 0.3s;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+			transform: translateY(-3px);
+		}
+	}
+	&.btn_bl {
+		background-color: $bannerColor;
+		color: #fff;
+	}
+	&.btn_red {
+		background-color: red;
+		color: #fff;
+	}
+	&.btn_white {
+		background-color: #fff;
+		color: #333;
+	}
+	&.btn_center {
+		width: fit-content;
+		display: block;
+		margin: 0 auto;
+		color: #fff;
+	}	
+	&_fixed {
+		padding: 7px 25px;
+		font-weight: 500;
+		&:hover {
+			transform: translateY(0);
+		}
+		@media (min-width: $tablet) {
+			display: none;
+		}
+	}
+	&:disabled {
+		opacity: 0.7;
+		&:hover {
+			transform: none;
+		}
+	}
+	&.btn-return {
+		padding-top: 9px;
+		padding-bottom: 9px;
+		@include adaptiveValue('padding-left', 25, 17);
+		@include adaptiveValue('padding-right', 25, 17);
+		&_empty {
+			text-align: center;
+			margin: 0 auto;
+			display: flex;
+			width: fit-content;
+			margin-top: 50px;
+		}
+	}
+}
+.btn-clear {
+	border: 0;
+	font-size: 13px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 0.3s, box-shadow 0.3s;
+	cursor: pointer;
+	display: inline-block;
+	padding: 9px 25px;
+	text-align: center;
+	white-space: nowrap;
+	@media (any-hover: hover) {
+		&:hover {
+			box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+			transform: translateY(-3px);
+		}
+	}
+}
+.btn-delete {
+	transition: all 0.3s;
+	background-color: transparent;
+	@media (any-hover: hover) {
+		&:hover {
+			transform: translateY(-3px);
+			color: $orangeColor;
+		}
+	}
+	@media (max-width: $mobileSmall) {
+		svg {
+			height: 20px;
+			width: 20px;
+		}
+	}
+}
+.btn-search {
+	display: grid;
+	place-content: center;
+	padding: 10px 10px 10px 25px;
+	height: 50px;
+	transition: all 0.3s;
+	@media (any-hover: hover) {
+		&:hover {
+			color: $orangeColor;
+		}
+	}
+}
+.btn-close {
+	position: absolute;
+	right: 20px;
+	top: 30px;
+	height: 30px;
+	width: 30px;
+	border: 1px solid $orangeColor;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s cubic-bezier(0.21, 0, 0.18, 1);
+	&::after,
+	&::before {
+		background-color: $orangeColor;
+		content: '';
+		height: 13px;
+		position: absolute;
+		width: 1px;
+	}
+	&::before {
+		transform: rotate(45deg);
+	}
+	&::after {
+		transform: rotate(-45deg);
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $orangeColor;
+			&::after,
+			&::before {
+				background-color: #fff;
+			}
+		}
+	}
+}
+.btn-submit {
+	width: 100%;
+	font-size: 14px;
+	line-height: 1.4;
+	padding: 9px 25px;
+}
+.btn-modal {
+	@include adaptiveValue('padding-top', 9, 8);
+	@include adaptiveValue('padding-bottom', 9, 8);
+	@include adaptiveValue('padding-left', 25, 17);
+	@include adaptiveValue('padding-right', 25, 17);
+}

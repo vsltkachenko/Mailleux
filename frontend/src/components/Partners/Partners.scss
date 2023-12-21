@@ -1,0 +1,27 @@
+@import '../../styles/vars.scss';
+
+.partners {
+	.container {
+		@media (max-width: $mobile) {
+			padding: 0;
+		}
+	}
+}
+.partners-slider {
+	&__slide {
+		padding: 0 10px;
+		img {
+			filter: grayscale(1);
+			margin: auto;
+			max-width: 100%;
+		}
+	}
+
+	.slick {
+		&-track {
+			display: flex;
+			align-items: center;
+			column-gap: 30px;
+		}
+	}
+}

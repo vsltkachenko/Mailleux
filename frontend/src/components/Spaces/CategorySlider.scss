@@ -1,0 +1,69 @@
+@import '../../styles/mixins';
+
+.category-slider {
+	@include adaptiveValue('margin-top', 100, 30);
+	&__slide {
+		height: 500px;
+		@include adaptiveValue('height', 500, 400, 1, 1920, 480);
+
+		// padding: 0 10px;
+	}
+	.image-category__text {
+		@include adaptiveValue('font-size', 46, 36);
+	}
+	.slick {
+		&-track {
+			display: flex;
+			@include adaptiveValue('gap', 20, 15);
+		}
+		&-list {
+			overflow: visible;
+		}
+		&-slider {
+			.slick-prev {
+				left: -75px;
+			}
+			.slick-next {
+				right: -75px;
+			}
+		}
+		&-slide {
+			&[aria-hidden='true'] {
+				opacity: 0.1;
+				pointer-events: none;
+			}
+			transition: opacity 1s;
+			will-change: opacity;
+		}
+		&-dots {
+			position: static;
+			margin-top: 20px;
+			li {
+				width: auto;
+				height: auto;
+				button {
+					height: 4px;
+					width: 40px;
+					padding: 0;
+
+					&::before {
+						content: '';
+						display: block;
+						height: 100%;
+						width: 100%;
+						background-color: $orangeColor;
+					}
+					&:focus,
+					&:hover {
+						&::before {
+							opacity: 0.25;
+						}
+					}
+				}
+				&.slick-active button::before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

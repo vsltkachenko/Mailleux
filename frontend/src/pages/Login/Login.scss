@@ -1,0 +1,39 @@
+@import '../../styles/vars.scss';
+
+.login {
+	max-width: 500px;
+	margin: auto;
+	padding: 70px 0;
+	text-align: center;
+	width: 100%;
+
+	// .login__box
+	&__box {
+		margin: auto;
+		max-width: 390px;
+		h1 {
+			color: $orangeColor;
+			font-family: 'Balboa';
+			line-height: 1.06;
+			font-size: 40px;
+			font-weight: 500;
+		}
+	}
+}
+.form {
+	padding: 32px 20px;
+
+	
+	// .form__submit
+	&__submit {
+		margin-top: 35px;
+		display: grid;
+		gap: 12px;
+		p {
+			font-size: 13px;
+			color: $mainColor;
+			margin-top: 10px;
+		}
+		
+	}
+}

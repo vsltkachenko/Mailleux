@@ -1,0 +1,48 @@
+@import '../../styles/vars.scss';
+.suggestions {
+	max-height: 350px;
+	width: 100%;
+	display: grid;
+	overflow-y: auto;
+	background-color: #fff;
+
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	z-index: 100;
+	
+	
+
+	// .suggestions__item
+	&__item {
+		display: flex;
+		align-items: center;
+		margin: 15px 20px;
+		cursor: pointer;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $orangeColor;
+			}
+		}
+	}
+	// .suggestions__image
+	&__image {
+		height: 60px;
+		margin-right: 15px;
+		width: 60px;
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	// .suggestions__content
+	&__content {
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 1.8;
+		@media (max-width: $mobileSmall) {
+		font-size: 16px;
+	}
+	}
+}

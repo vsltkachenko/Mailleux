@@ -1,0 +1,16 @@
+@import '../../styles/mixins.scss';
+
+.selected-products {
+	&__content {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	&__cards {
+		@include adaptiveValue('margin-top', 50, 25);
+		margin-bottom: 25px;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		@include adaptiveValue('gap', 40, 10);
+	}
+}
