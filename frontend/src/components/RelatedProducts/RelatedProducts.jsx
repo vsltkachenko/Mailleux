@@ -35,7 +35,7 @@ const RelatedProducts = ({ addToCart }) => {
 						{relatedProducts.map((product, index) => (
 							<div className='related-products__item' key={index}>
 								<Link to={`/catalog/product/${product.id}`} className='related-products__image'>
-									<img src={`${process.env.REACT_APP_FRONTEND_URL}${product.image}`} alt='' />
+									<img src={`../../${product.image}`} alt='' />
 								</Link>
 
 								<div className='related-products__body'>
