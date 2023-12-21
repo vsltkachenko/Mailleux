@@ -20,7 +20,7 @@ const Suggestions = ({ closeSearch, closeSuggestions }) => {
 					}}
 				>
 					<div className='suggestions__image'>
-						<img src={`${process.env.REACT_APP_FRONTEND_URL}${product.image}`} alt='' />
+						<img src={`../../${product.image}`} alt='' />
 					</div>
 					<div className='suggestions__content'>{product.title}</div>
 				</Link>
