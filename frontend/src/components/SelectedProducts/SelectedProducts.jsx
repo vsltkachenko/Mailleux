@@ -14,7 +14,7 @@ const SelectedProducts = () => {
 	const { selectedProducts, isLoading } = useSelector(state => state.products)
 
 	useEffect(() => {
-		if (!selectedProducts.length) {
+		if (!selectedProducts?.length) {
 			dispatch(getSelectedProducts({ productsCount: 4 }))
 		}
 	}, [dispatch, selectedProducts?.length])
