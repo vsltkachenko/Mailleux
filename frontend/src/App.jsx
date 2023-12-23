@@ -16,6 +16,7 @@ import Cart from './pages/Cart/Cart.jsx'
 import Dashboard from './pages/Dashboard/Dashboard.jsx'
 import LoginHookForm from './pages/Login/LoginHookForm.jsx'
 import RegisterHookForm from './pages/Register/RegisterHookForm.jsx'
+import Preloader from './shared/Preloader/Preloader.jsx'
 
 function App() {
 	const dispatch = useDispatch()
@@ -45,6 +46,7 @@ function App() {
 
 			<FollowUs />
 			<ToastContainer position='bottom-right' theme='light' />
+			<Preloader />
 		</div>
 	)
 }

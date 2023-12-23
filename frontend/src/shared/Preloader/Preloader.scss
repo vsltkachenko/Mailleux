@@ -1,0 +1,17 @@
+.preloader {
+	background-color: rgba($color: #fff, $alpha: 0.9);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	left: 0;
+	top: 0;
+	visibility: hidden;
+	z-index: 2000;
+	pointer-events: none;
+	&.show {
+		visibility: visible;
+	}
+}
