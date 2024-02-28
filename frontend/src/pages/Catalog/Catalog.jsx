@@ -14,7 +14,7 @@ import useSearchFilters from '../../hooks/useSearchFilters'
 import { setFiltersToStore } from '../../features/products/filtersSlice'
 import { useComponentDidMount } from '../../hooks/useComponentDidMount'
 import useIsMobile from '../../hooks/useIsMobile'
-import Paginations from '../../shared/Paginations/Paginations'
+import Paginations from '../../shared/Pagination/Pagination'
 import CatalogHeader from './CatalogHeader'
 import AsideCard from '../../components/Aside/AsideCard'
 

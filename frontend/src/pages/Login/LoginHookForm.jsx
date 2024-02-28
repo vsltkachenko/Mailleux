@@ -77,6 +77,7 @@ const LoginHookForm = () => {
 							Login
 						</Button>
 						<p>Don't have an account?</p>
+						<p>Demo account: demo@gmail.com / password: demo123</p>
 						<Button type='link' path='/register' classes='btn btn_bl'>
 							Register
 						</Button>

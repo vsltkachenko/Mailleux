@@ -25,10 +25,20 @@ const FollowUs = () => {
 		<aside className={`follow ${isFix ? 'fix' : ''}`}>
 			<div className='follow__text'>Suivez-nous</div>
 			<ul className='follow__social'>
-				<a href='https://www.facebook.com' className='social__link_facebook'>
+				<a
+					href='https://www.facebook.com'
+					target='_blank'
+					rel='noopener noreferrer'
+					className='social__link_facebook'
+				>
 					<FacebookCircleFillIcon />
 				</a>
-				<a href='https://www.instagram.com' className='social__link_instagram'>
+				<a
+					href='https://www.instagram.com'
+					target='_blank'
+					rel='noopener noreferrer'
+					className='social__link_instagram'
+				>
 					<InstagramLineIcon />
 				</a>
 			</ul>

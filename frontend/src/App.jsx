@@ -31,7 +31,6 @@ function App() {
 
 			<main className='main'>
 				<Routes>
-					<Route path='/' element={<Home />} />
 					<Route path='/register' element={<RegisterHookForm />} />
 					<Route path='/login' element={<LoginHookForm />} />
 					<Route path='/catalog' element={<Catalog />} />
@@ -39,6 +38,7 @@ function App() {
 					<Route path='/cart' element={<Cart />} />
 					<Route path='/contact' element={<Contact />} />
 					<Route path='/dashboard/:path' element={<Dashboard />} />
+					<Route path='/*' element={<Home />} />
 				</Routes>
 			</main>
 

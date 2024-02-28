@@ -1,0 +1,40 @@
+@import '../../styles/vars.scss';
+
+.pagination {
+	flex-wrap: wrap;
+	align-items: center;
+	display: flex;
+	font-weight: 700;
+	justify-content: center;
+	column-gap: 10px;
+	row-gap: 20px;	
+
+	li {
+		line-height: 1;
+
+		span {
+			font-size: 18px;
+			padding: 2px 8px;
+			position: relative;
+			cursor: pointer;
+
+			&.active-page {
+				color: $orangeColor;
+				&::after {
+					opacity: 1;
+				}
+			}
+
+			&::after {
+				background-color: $orangeColor;
+				content: '';
+				display: block;
+				height: 2px;
+				opacity: 0.3;
+				position: absolute;
+				top: 100%;
+				width: 100%;
+			}
+		}
+	}
+}

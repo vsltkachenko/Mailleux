@@ -23,7 +23,6 @@
 .form {
 	padding: 32px 20px;
 
-	
 	// .form__submit
 	&__submit {
 		margin-top: 35px;
@@ -34,6 +33,8 @@
 			color: $mainColor;
 			margin-top: 10px;
 		}
-		
+		p + p {
+			color: $orangeColor;
+		}
 	}
 }
