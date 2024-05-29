@@ -174,7 +174,7 @@ export const productsSlice = createSlice({
 		})
 		// getSelectedProducts
 		builder.addCase(getSelectedProducts.pending, state => {
-			state.isLoading = true
+			// state.isLoading = true
 		})
 		builder.addCase(getSelectedProducts.fulfilled, (state, { payload }) => {
 			state.selectedProducts = payload.data
