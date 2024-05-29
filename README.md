@@ -32,7 +32,7 @@ cd frontend/
 3. Rename `.env.example` file inside `/frontend` to `.env` and configurate file.
 4. Run frontend - `npm run start`.
 
-> **NOTE:** I'm hosting this site (frontend) on <a href="https://mailleux.vercel.app/" target="_blank">Vercel</a>
+> **NOTE:** I'm hosting this site (frontend) on <a href="https://mailleux.vercel.app/" target="_blank" rel="noopener noreferrer">Vercel</a>
 . The backend is hosted on Render.com.
 
 ## Screenshots
