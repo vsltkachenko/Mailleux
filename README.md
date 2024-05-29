@@ -2,7 +2,11 @@
 
 Online store website.  
 The frontend is created on React, the backend on Node.js (Express). MongoDB is used as a database.  
-The project implemented customer registration and authorization, page-by-page pagination, sorting and product search.
+
+## Description
+
+The project implements customer registration and authorization, product pagination by page, sorting and search.
+The customer can add the product to the cart and make a purchase, which is displayed in his personal account.
 
 ## Installation
 
